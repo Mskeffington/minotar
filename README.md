@@ -4,6 +4,3 @@ Minotar is a MINimal memory Overhead TARball extraction library.  It accomplishe
 It is very simple to wrap Minotar and give gzip functionality.  See the examples directory for usage.
 
 As different applications supporting tar contain very fragmented extensions, it would be difficult to support them all.  Currently this library supports basic tarball functionality and tarball ustar functionality as specified in the IEEE spec.  I've tested this library against packages compressed with GNU Tar and BSD Tar to verify the functionality.
-
-## Known Issues:
-Oddly, GNU Tar has a large block of null bytes at the end of the package.  Despite successfully extracting the tarball, we return a failure because it cant successfully parse the end of the package.
