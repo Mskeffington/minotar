@@ -1,0 +1,9 @@
+.*
+*swp
+build
+*kdev*
+~*
+*.o
+*.a
+*.so
+ 
