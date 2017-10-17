@@ -95,7 +95,5 @@ minotar_error_t minotar_set_extract_directory(minotar_t* instance, const char* p
  */
 minotar_error_t minotar_decode(minotar_t* instance, const char* bytes, size_t length);
 
-#define minotar_strerror(e) {switch(e)
-
 #endif // MINOTAR_TARBALL_EXTRACT_H
 
