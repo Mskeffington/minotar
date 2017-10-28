@@ -96,7 +96,7 @@ static inline dev_t minotar_header_get_device_version(minotar_t* instance)
  * Initialize the Minotar library.  This function allocates 560 bytes of data for
  * the interal structure.
  * 
- * @return an error code as defined in @link <minotar_error.h>.
+ * @return an error code as defined in the error struct.
  */
 minotar_error_t minotar_init(minotar_t** p_instance)
 {
@@ -117,7 +117,7 @@ minotar_error_t minotar_init(minotar_t** p_instance)
 /**
  * Deinitialize the Minotar library and clean up allocated memory.
  * 
- * @return an error code as defined in @link <minotar_error.h>.
+ * @return an error code as defined in the error struct.
  */
 minotar_error_t minotar_deinit(minotar_t** p_instance)
 {
@@ -138,7 +138,7 @@ minotar_error_t minotar_deinit(minotar_t** p_instance)
  * This path may be fully qualified or it can be relative.
  * 
  * @param path  A null-terminated pointer to a path on the filesystem.
- * @return an error code as defined in @link <minotar_error.h>.
+ * @return an error code as defined in the error struct.
  */
 minotar_error_t minotar_set_extract_directory(minotar_t* instance, const char* path)
 {
@@ -165,7 +165,7 @@ minotar_error_t minotar_set_extract_directory(minotar_t* instance, const char* p
  * A reset clears all errors and expects the beginning of a record block as its first
  * input.  If a reset is performed in the middle of decoding, unexpected results can occur.
  * 
- * @return an error code as defined in @link <minotar_error.h>.
+ * @return an error code as defined in the error struct.
  */
 minotar_error_t minotar_reset(minotar_t* instance)
 {
@@ -191,7 +191,7 @@ minotar_error_t minotar_reset(minotar_t* instance)
  * 
  * @param bytes     A buffer of bytes as it comes in from the file.
  * @param length    the length of buffer bytes.
- * @return an error code as defined in @link <minotar_error.h>.
+ * @return an error code as defined in the error struct.
  */
 minotar_error_t minotar_decode(minotar_t* instance, const char* bytes, size_t length)
 {
